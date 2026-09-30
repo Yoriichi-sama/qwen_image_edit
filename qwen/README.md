@@ -7,8 +7,18 @@ glass & stone materials — while **preserving the building structure exactly**
 ## Files
 | File | Purpose |
 |---|---|
+| `setup_and_run.sh` | **One-shot helper**: installs deps, checks GPU, downloads models, then generates (pass a photo as argument) |
+| `requirements.txt` | Python dependencies (`pip install -r requirements.txt`) |
 | `download_models.py` | Downloads Qwen-Image-Edit-**2511** + text encoder + VAE + Lightning LoRA into `models/` (~27 GB total, resume-safe) |
 | `generate.py` | Runs the model on your **GPU** via ComfyUI and generates the elevation image |
+
+## Easiest way (one command)
+```bash
+cd qwen
+./setup_and_run.sh my_building.jpg     # installs everything, downloads 2511, generates design
+# or just setup without an image yet:
+./setup_and_run.sh
+```
 
 ## Quick Start (3 steps)
 
