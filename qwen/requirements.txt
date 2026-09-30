@@ -1,0 +1,8 @@
+# Python dependencies for the Qwen-Image-Edit 2511 elevation generator
+# Install with:  pip install -r requirements.txt
+
+requests>=2.31.0            # used by download_models.py (model downloads)
+websocket-client>=1.6.0     # used by generate.py (talks to ComfyUI server)
+
+# NOTE: PyTorch is installed via ComfyUI, not here. On your NVIDIA GPU run:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
